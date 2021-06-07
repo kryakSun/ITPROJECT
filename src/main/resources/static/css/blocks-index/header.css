@@ -1,0 +1,44 @@
+.header-wrap{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	background-color: #002F34;
+	height: 80px;
+}
+
+.header-info{
+	padding-left: 250px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+}
+.profile-link{
+	text-decoration: none;
+	color: white;
+}
+.profile-link-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.addnewpost-link{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #002F34;	
+	width: 150px;
+	background-color: #fff;
+	height: 45px;
+}
+
+.header-logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header-text{
+	color: #23E5DB;
+	font-family: main-font;
+	font-size: 25px; 
+}
