@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bishop</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <style>
+		@font-face {font-family: main-font;src:url(./fonts/main-font.ttf);}
+
+		.info-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .info{
+        margin-top: 100px;
+        width: 400px;
+        height: 300px;
+        background-color: red;
+        border:2px solid black;
+        border-radius:3px;
+        }
+	</style>
+</head>
+<body>
+<div class="container">
+    <header class="header" th:insert="blocks/header :: header"></header>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+</style>
+<div th:fragment="homePageAds">
+    <div class="addshomepage-wrap">
+        <h1>Best Adds</h1>
+        <div class="bestadds-wrap">
+            <div th:each="element: ${posts}" class="alert-info mt-2" style="padding=0; text-overflow: ellipsis; background-color: #D7D7D7">
+                <img src="./img/icons/close.png" class="bestadd-item-img">
+                <a href="" class="bestadd-item">
+                <h5 th:text="${element.title}" style="padding-top:5px;" /><br>
+                <p th:text="${element.fullText}"/><br>
+                <p th:text="${'Price:' + element.price}"/>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>

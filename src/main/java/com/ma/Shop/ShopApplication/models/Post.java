@@ -10,6 +10,12 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    public Post(String title, String fullText, int price) {
+        this.title = title;
+        this.fullText = fullText;
+        this.price = price;
+    }
+    public Post(){};
     private String title, fullText;
     private int price;
 

@@ -1,0 +1,22 @@
+<div th:fragment="test" class="bestadds-wrap">
+    <div th:each="element: ${posts}" class="alert alert-info mt-2">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="./img/icons/close.png">
+                    <div class="caption">
+                        <h3 th:text="${element.title}"/><br>
+                        <p th:text="${element.fullText}"/><br>
+                        <p th:text="'Price:' + ${element.price}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

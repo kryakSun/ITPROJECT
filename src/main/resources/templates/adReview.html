@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>qwe</title>
+    <!-- <title th:text="main + ${variable}" /> -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <style>
+		@font-face {
+			font-family: main-font;
+			src:url(./fonts/main-font.ttf);
+		}
+
+	</style>
+</head>
+<body>
+<div class="container">
+    <header class="header" th:insert="blocks/header :: header"></header>
+
+    <div th:each="element: ${posts}" class="alert alert-info mt-2" style="background color: black;color: black;">
+        <h3 th:text="${element.title}"/>
+        <p th:text="${element.fullText}"/>
+        <p th:text="${element.price}"/>
+        <a th:href="'/shop/' + ${element.id}" style="color:black;" class="btn btn-warning" >More</a>
+        <a th:href="'/shop/add' + ${element.id}" style="color:black;" >Create an ad</a>
+    </div>
+    <content class="content">
+        <div class="content-wrap wrap">
+            <div class="sp-wrap-search">
+
+            </div>
+            <div class="categories-wrap">
+                <h1 style="align-items: center; display: flex; justify-content: center; color: #002F34;">categories</h1>
+                <div class="categories-items">
+                    <a href="" class="category-item"><img src="./img/car.jfif" style="width: 100px;height: 100px;">
+                        <p class="category-item-text">car</p></a>
+                    <a href="" class="category-item"><img src="./img/phone.jfif" style="width: 100px;height: 100px;">
+                        <p class="category-item-text">Phone</p></a>
+                    <a href="" class="category-item"><img src="./img/icons/key.png" style="width: 100px;height: 100px;">
+                        <p class="category-item-text">Apartments</p></a>
+                </div>
+            </div>
+            <div class="addshomepage-wrap">
+                <h1 style="color: #002F34;">Best Adds</h1>
+                <div class="bestadds-wrap">
+                    <a href="" class="bestadd-item"><img src="./img/icons/close.png" class="bestadd-item-img"><p class="bestadd-item-text">1</p></a>
+                    <a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
+                        <h6>h6</h6></p></a>
+                    <a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
+                        <h6>h6</h6></p></a>
+                    <a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
+                        <h6>h6</h6></p></a>
+                    <a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
+                        <h6></h6></p></a>
+                    <a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
+                        <h6></h6></p></a>
+                    <a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
+                        <h6></h6></p></a>
+                    <a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
+                        <h6></h6></p></a>
+                </div>
+            </div>
+        </div>
+    </content>
+</div>
+</body>
+</html>

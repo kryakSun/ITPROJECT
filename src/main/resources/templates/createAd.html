@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bishop</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <style>
+		@font-face {
+			font-family: main-font;
+			src:url(../static/fonts/main-font.ttf);
+		}
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header" th:insert="blocks/header :: header"></header>
+    <content class="content">
+        <div class="bg-light p-5 rounded">
+            <div class="creatingAd">
+                <h1>Create an ad</h1>
+                <form action="/shop/add" method="post">
+                    <input type="text" name="title" placeholder="Enter the title" class="form-control"><br>
+                    <textarea name="fullText" placeholder="Enter the text" class="form-control"></textarea><br>
+                    <input type="number" name="price" placeholder="Enter the price" class="form-control"><br>
+                    <div class="form-group">
+                        <label for="photoInput">Upload files</label><br>
+                        <input type="file" id="photoInput">
+                        <p class="help-block">Choose a photo to improve your ad</p>
+                    </div>
+                    <button type="submit" class="btn btn-success">add ad</button>
+                </form>
+            </div>
+             </div>
+    </content>
+</div>
+</body>
+</html>

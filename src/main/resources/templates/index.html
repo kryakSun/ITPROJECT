@@ -1,89 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-	<title th:text="main + ${variable}" />
-	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<title>Bishop</title>
+	 <link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
 	<style>
-		@font-face {
-			font-family: main-font;
-			src:url(./fonts/main-font.ttf);
-		}
-	</style>
+		@font-face {font-family: main-font;src:url(./fonts/main-font.ttf);}
+	</style> 
 </head>
 <body>
 	<div class="container">
-		<header class="header" th:insert="blocks/header :: header">
-			<!--<div class="header-wrap wrap">
-				<div class="header-logo">
-					<p class="header-text">EVESALE</p>
-				</div>
-				<div class="header-info">
-					<span>someInfo</span>
-						<a href="" class="profile-link">
-						<span class="profile-link-text"><img src="./img/icons/user1.png" style="width: 30px; height: 30px; background-color: #fff; border-radius: 16px; margin-right: 15px;">
-						Profile</span>
-					</a>
-					<a href="" class="addnewpost-link">
-						<span class="addnewpost-link-text" >Add new ad</span>
-					</a>
-				</div>
-			</div>-->
-		</header>
-
-		<div th:each="element: ${posts}" class="alert alert-info mt-2">
-			<h3 th:text="${element.title}"/>
-			<p th:text="${element.fullText}"/>
-			<a th:href="'/blog/' + ${element.id}">More</a>
-		</div>
+		<header class="header" th:insert="blocks/header :: header"></header>
 		<content class="content">
 			<div class="content-wrap wrap">
-				<div class="sp-wrap-search">
-					<div class="search-item">
-						<span style="display: flex; justify-content: center; align-items: center; padding-left: 55px;">
-							<img src="./img/icons/search-icon.png"  class="search-icon-1" style="width: 25px; 
-							height:25px;"></span>
-						<input type="text" class="search-field" size="40" placeholder="Input item to search"> 
-						<div class="city-field-wrap"> 
-							<img src="./img/icons/location.png" style="width: 25px; height: 25px;">
-							<input type="text" class="city-field" placeholder="All Ukraine">
-							<img id="closeIcon" src="./img/icons/close.png"style="width: 25px; height: 25px;">
-						</div>	
-						<a href="" class="search-link-button"><p style=" display: flex; justify-content: center; font-size: 18px; padding-left: 10px;color: #002F34;">Search</p>
-							<span style="display: flex; justify-content: center; align-items: center;"><img src="./img/icons/search-icon.png" class="search-icon-2"></span>
-						</a>
-					</div>
-				</div>
-				<div class="categories-wrap">
-					<h1 style="align-items: center; display: flex; justify-content: center; color: #002F34;">categories</h1>
-					<div class="categories-items">
-						<a href="" class="category-item"><img src="./img/car.jfif" style="width: 100px;height: 100px;">
-							<p class="category-item-text">car</p></a>
-						<a href="" class="category-item"><img src="./img/phone.jfif" style="width: 100px;height: 100px;">
-							<p class="category-item-text">Phone</p></a>
-						<a href="" class="category-item"><img src="./img/icons/key.png" style="width: 100px;height: 100px;">
-							<p class="category-item-text">Apartments</p></a>
-					</div>
-				</div>
-				<div class="addshomepage-wrap">
-					<h1 style="color: #002F34;">Best Adds</h1>
-					<div class="bestadds-wrap">
-						<a href="" class="bestadd-item"><img src="./img/icons/close.png" class="bestadd-item-img"><p class="bestadd-item-text">1</p></a>
-						<a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
-							<h6>h6</h6></p></a>
-						<a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
-							<h6>h6</h6></p></a>
-						<a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
-							<h6>h6</h6></p></a>
-						<a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
-							<h6></h6></p></a>
-						<a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
-							<h6></h6></p></a>
-						<a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
-							<h6></h6></p></a>
-						<a href="" class="bestadd-item"><img src="" class="bestadd-item-img"><p class="bestadd-item-text">
-							<h6></h6></p></a>
-					</div>
-				</div>
+				<div  th:insert="blocks/categories :: categories"></div>
+				<div  th:insert="blocks/homePageAds :: homePageAds"></div>
 			</div>
 		</content>
 	</div>
